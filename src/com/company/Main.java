@@ -9,7 +9,17 @@ public class Main {
         dayOfWeek2(day2);
         double interest[] = {1,2,3,4,5,6,7,8};
         double amount = 10000.00;
-        calculateInterestRate(amount, interest);
+
+        int count = 0;
+        for(int i = 10;  i< 50; i++){
+            if(isPrime(i)){
+                count++;
+                System.out.println(i + " is a prime number");
+            }else if(count == 3){
+                System.out.println("exiting loop");
+                break;
+            }
+        }
 
 
 
@@ -48,8 +58,20 @@ public class Main {
 
         for(int i = 0; i < interestRate.length; i++){
             double x = interestRate[i];
-            System.out.println("interest rate at " + x + "%" + " is " + amount * (x/100) +"%" );
+            System.out.println("interest rate at " + x + "%" + " is " + String.format("%.2f", amount * (x/100) ) );
         }
         //return(amount * (interestRate/100));
+    }
+
+    public static boolean isPrime(int n) {
+        if(n == 1) {
+            return false;
+        }
+        for(int i = 2; i <= n/2; i++){
+            if(n % i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }
