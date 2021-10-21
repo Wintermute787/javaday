@@ -9,6 +9,7 @@ public class Main {
         dayOfWeek2(day2);
         double interest[] = {1,2,3,4,5,6,7,8};
         double amount = 10000.00;
+        System.out.println("test");
 
         int count = 0;
         for(int i = 10;  i< 50; i++){
