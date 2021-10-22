@@ -10,6 +10,7 @@ public class Main {
         double interest[] = {1,2,3,4,5,6,7,8};
         double amount = 10000.00;
         System.out.println("test");
+        System.out.println(canPack(1, 0, 4));
 
         int count = 0;
         for(int i = 10;  i< 50; i++){
@@ -75,4 +76,13 @@ public class Main {
         }
         return true;
     }
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+        int bigSize = bigCount * 5;
+        int smallSize = smallCount;
+        int total = bigSize + smallSize;
+        if(total > goal ) {
+            return false;
+        }else return total < goal;
+    }
+
 }
